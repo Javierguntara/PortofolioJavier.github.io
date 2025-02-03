@@ -1,0 +1,153 @@
+@import "../../vars.css";
+
+.container {
+    position: relative;
+    background-color: rgba(12, 12, 12, 0.6);
+    border-radius: 15px;
+    padding: 73px;
+    margin-top: 120px;
+    z-index: 1;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.aboutItem img {
+    width: 75px;  /* Set the width of the image */
+    height: auto; /* Set the height of the image to match the width */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    margin-right: 30px;
+}
+
+.aboutItems {
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.aboutItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 20px;
+    list-style: none;
+    padding: 20px;
+    background-image: linear-gradient(90deg, 
+    #063970, 
+    rgba(255, 255, 255, 0)
+    );
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+
+.aboutItem:hover {
+    background-size: 100% 100%;
+}
+
+.aboutItem h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.aboutItem p {
+    font-size: 25px;
+}
+
+/* Ensure the wrapper takes the same size as the image */
+.imageWrapper {
+    position: relative;
+    display: flex; /* Ensures it expands to fit the image */
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10%;
+}
+
+/* Image inside the wrapper */
+.aboutImage {
+    width: 275px; /* Ensures it fills the wrapper */
+    height: 400px;
+    border-radius: 10%;
+    z-index: 2;
+    display: block;
+}
+
+/* Glowing border effect */
+.imageWrapper::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    right: 50px;
+    bottom: 10px;
+    border-radius: 10%;
+    box-shadow: 10px 20px 50px 20px #063970;
+    background: linear-gradient(45deg, 
+    #6790BB,  
+    rgba(12, 12, 12, 0.6), 
+    #011020, 
+    #063970,
+    #D7D7EA
+    );  
+    background-size: 400%;
+    z-index: -1;
+    filter: saturated(50%);
+    opacity: 0.8;
+    animation: glow-animation 7s ;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+/* Animation for glowing effect */
+@keyframes glow-animation {
+    0% { background-position: 0 0; }
+    50% { background-position: 100% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media screen and (max-width: 830px) {
+    .container {
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .aboutImage {
+        display: none;
+    }
+
+    .imageWrapper {
+        display: none;
+    }
+
+    .aboutItems {
+        margin-top: 29px;
+    }
+
+    .aboutItem {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

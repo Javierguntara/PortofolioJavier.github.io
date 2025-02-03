@@ -1,0 +1,31 @@
+[
+  {
+    "role": "Front-End developer",
+    "organisation": "Pemerintah Kota Yogyakarta - Bag. Umum dan Protokol",
+    "startDate": "January",
+    "endDate": "Maret 2024",
+    "experiences": ["Mengembangkan Front-End Website KILAS", "Menggunakan Vue"],
+    "imageSrc": "history/logo-walkot-removebg-preview.png"
+  },
+  {
+    "role": "Pembaharuan UI/UX Website (Tugas Akhir)",
+    "organisation": "RSUD DOK II Jayapura ",
+    "startDate": "Januari",
+    "endDate": "Oktober 2024",
+    "experiences": ["Metode Design Thinking", "Penggunaan Tools Figma dan balsamiq wireframes", "Penerapan Auto-Layout", "Pengujian SUS"],
+    "imageSrc": "history/UAJY.png"
+  },
+  {
+    "role": "IT",
+    "organisation": "CV. Yudha Anugerah",
+    "startDate": "November 2024",
+    "endDate": "Januari 2025",
+    "experiences": [
+      "Pengembangan Website",
+      "Menggunakan React",
+      "MySQL",
+      "Maintenance Perangkat"
+    ],
+    "imageSrc": "history/cvlogo.png"
+  }
+]
